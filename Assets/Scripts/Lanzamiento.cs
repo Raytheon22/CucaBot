@@ -25,7 +25,7 @@ public class Lanzamiento : MonoBehaviour
         {
             if (FuerzaDeLanzamiento < LimiteDeLanzamiento)
             {
-                FuerzaDeLanzamiento = FuerzaDeLanzamiento + 100 * Time.deltaTime;
+                FuerzaDeLanzamiento = FuerzaDeLanzamiento + 500 * Time.deltaTime;
             }
 
         }

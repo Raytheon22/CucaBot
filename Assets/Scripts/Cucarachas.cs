@@ -34,10 +34,10 @@ public class Cucarachas : MonoBehaviour
     void Sensores()
     {
         RaycastHit Objetivo;
-        Debug.DrawRay(transform.position, transform.forward * 1f);
+        Debug.DrawRay(transform.position, transform.forward * 0.5f, Color.blue);
         if (Physics.Raycast(transform.position, transform.forward, out Objetivo, 0.5f))
         {
-            transform.rotation *= Quaternion.Euler(90f, 0, 0);
+            transform.rotation = Quaternion.FromToRotation(transform.up, Objetivo.normal) * transform.rotation;
         }
     }
 }
