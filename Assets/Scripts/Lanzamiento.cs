@@ -12,7 +12,7 @@ public class Lanzamiento : MonoBehaviour
     [SerializeField] float LimiteDeLanzamiento;
     void Start()
     {
-        FuerzaDeLanzamiento = 500;
+        FuerzaDeLanzamiento = 2000;
     }
     void Update()
     {
@@ -33,7 +33,7 @@ public class Lanzamiento : MonoBehaviour
         {
             ObjetoInstanciado = Instantiate(chancla, this.gameObject.transform.position, Random.rotation);
             ObjetoInstanciado.GetComponent<Rigidbody>().AddForce(this.gameObject.transform.forward * FuerzaDeLanzamiento, ForceMode.Acceleration);
-            FuerzaDeLanzamiento = 500;
+            FuerzaDeLanzamiento = 2000;
             CargandoLanzamiento = false;
         }
     }

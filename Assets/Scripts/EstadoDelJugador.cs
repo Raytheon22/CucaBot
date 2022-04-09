@@ -9,7 +9,8 @@ public class EstadoDelJugador : MonoBehaviour
     [SerializeField] int Vida;
     void Start()
     {
-
+        ManagerDeNivel.CucarachasAsesinadas = 0;
+        ManagerDeNivel.CantidadDeCucarachas = 0;
     }
 
     void Update()

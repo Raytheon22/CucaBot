@@ -9,7 +9,8 @@ public class ManagerConfiguraciones : MonoBehaviour
     private static ManagerConfiguraciones ConfiguracionesJuego;
     public static int VolumenMusica = 100;
     public static int VolumenEfectos = 80;
-    public static int Sensibilidad = 80;
+    public static int Sensibilidad = 200;
+
     void Awake() //* DECLARACION DEL SINGLETON
     {
         if (ConfiguracionesJuego == null)

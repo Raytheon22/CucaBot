@@ -37,7 +37,21 @@ public class Cucarachas : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 0.5f, Color.blue);
         if (Physics.Raycast(transform.position, transform.forward, out Objetivo, 0.5f))
         {
-            transform.rotation = Quaternion.FromToRotation(transform.up, Objetivo.normal) * transform.rotation;
+            if (Objetivo.transform.tag == "Escenario")
+            {
+                transform.rotation = Quaternion.FromToRotation(transform.up, Objetivo.normal) * transform.rotation;
+            }
+
         }
     }
+    public void Morir()
+    {
+        Destroy(this.gameObject);
+        ManagerDeNivel.CantidadDeCucarachas--;
+        print("Muerte");
+    }
 }
+
+
+
+

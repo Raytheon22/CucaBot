@@ -15,7 +15,17 @@ public class Spawner : MonoBehaviour
     {
         Invoke("SpawnearEntidad", OrdenDeSpawn);
     }
-
+    void Update()
+    {
+        if (ManagerDeNivel.CantidadDeCucarachas > 10)
+        {
+            PuedeSpawnear = false;
+        }
+        else
+        {
+            PuedeSpawnear = true;
+        }
+    }
     void SpawnearEntidad() //*RECURSIVIDAD.
     {
         if (PuedeSpawnear)
@@ -24,6 +34,7 @@ public class Spawner : MonoBehaviour
         }
         for (int n = 0; n < CantidadPorSpawn; n++)
         {
+            ManagerDeNivel.CantidadDeCucarachas++;
             Instantiate(Entidad, transform.position, transform.rotation);
         }
     }
