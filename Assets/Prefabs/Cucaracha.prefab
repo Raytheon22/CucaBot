@@ -110,5 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vida: 10
   Velocidad: 20
-  AleatoriedadDeGiro: 40
-  Nerviosa: 2
+  AleatoriedadDeGiro: 50
+  Nerviosa: 1

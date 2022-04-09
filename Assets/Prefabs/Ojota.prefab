@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3520062141321559234}
   - component: {fileID: -1270143447338366877}
   - component: {fileID: -4555781310077959250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojota
-  m_TagString: Untagged
+  m_TagString: Municion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
