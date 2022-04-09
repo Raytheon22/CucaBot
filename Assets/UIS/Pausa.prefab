@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 3716334002097335966}
   - component: {fileID: 5130624572097204331}
   m_Layer: 5
-  m_Name: Atras
+  m_Name: VolverAlJuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 770118178910162527}
         m_TargetAssemblyTypeName: Interfaz, Assembly-CSharp
-        m_MethodName: Atras
+        m_MethodName: VolverAlJuego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -574,7 +574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Atras
+  m_Text: 'Volver al juego
 
 '
 --- !u!1 &8113817746416043462

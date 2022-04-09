@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Ojota : MonoBehaviour
 {
-
+    private bool Mato;
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Enemigos")
+        if (Mato == false && other.gameObject.tag == "Enemigos")
         {
             other.gameObject.GetComponent<Cucarachas>().Morir();
             ManagerDeNivel.CucarachasAsesinadas++;
+            Mato = true;
         }
     }
 }

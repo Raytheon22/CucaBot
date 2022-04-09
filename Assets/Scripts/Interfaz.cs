@@ -14,8 +14,10 @@ public class Interfaz : MonoBehaviour
     }
     public void CargarNivel(string NombreDeNivel)
     {
+        Time.timeScale = 1;
         Cursor.visible = false;
         SceneManager.LoadScene(NombreDeNivel);
+        ManagerDeNivel.Pausa = false;
 
     }
     public void Opciones()
@@ -28,6 +30,13 @@ public class Interfaz : MonoBehaviour
     }
     public void Atras()
     {
+        Destroy(this.gameObject);
+    }
+    public void VolverAlJuego()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        ManagerDeNivel.Pausa = false;
         Destroy(this.gameObject);
     }
 }

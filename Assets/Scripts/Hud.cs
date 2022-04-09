@@ -6,6 +6,7 @@ public class Hud : MonoBehaviour
 {
     //! Este script se encarga de manipular el HUD.
     public GameObject UIPausa;
+
     void Start()
     {
 
@@ -13,8 +14,10 @@ public class Hud : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && ManagerDeNivel.Pausa == false)
         {
+            ManagerDeNivel.Pausa = true;
+            Time.timeScale = 0;
             Instantiate(UIPausa, Vector3.zero, Quaternion.identity);
         }
     }
