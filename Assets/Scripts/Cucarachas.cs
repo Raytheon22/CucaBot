@@ -17,8 +17,8 @@ public class Cucarachas : MonoBehaviour
     }
     void Update()
     {
-        Movimiento();
         Sensores();
+        Movimiento();
     }
     void Movimiento()
     {
@@ -37,8 +37,7 @@ public class Cucarachas : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 1f);
         if (Physics.Raycast(transform.position, transform.forward, out Objetivo, 0.5f))
         {
-            transform.position = Objetivo.point;
-            transform.rotation *= Quaternion.Euler(-90f, 0, 0);
+            transform.rotation *= Quaternion.Euler(90f, 0, 0);
         }
     }
 }
