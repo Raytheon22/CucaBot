@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cucarachas : MonoBehaviour
+public abstract class Cucarachas : MonoBehaviour
 {
-    //!Este script se encarga de realizar el movimiento de las cucarachas.
-
+    //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
     [SerializeField] int Vida;
     [SerializeField] int Velocidad;
     [SerializeField] int AleatoriedadDeGiro;
@@ -20,18 +19,17 @@ public class Cucarachas : MonoBehaviour
         Sensores();
         Movimiento();
     }
-    void Movimiento()
+    private void Movimiento()
     {
         transform.Translate(Vector3.forward * Velocidad * Time.deltaTime);
     }
-    void Rotacion()
+    private void Rotacion()
     {
         int VelocidadRotacion = 1 * Random.Range(-AleatoriedadDeGiro, AleatoriedadDeGiro);
         transform.Rotate(0, VelocidadRotacion, 0);
         Invoke("Rotacion", Random.Range(1, Nerviosa));
     }
-
-    void Sensores()
+    private void Sensores()
     {
         RaycastHit Objetivo;
         Debug.DrawRay(transform.position, transform.forward * 0.5f, Color.blue);
@@ -41,14 +39,15 @@ public class Cucarachas : MonoBehaviour
             {
                 transform.rotation = Quaternion.FromToRotation(transform.up, Objetivo.normal) * transform.rotation;
             }
-
         }
     }
-    public void Morir()
+    public virtual void Morir()
     {
-        Destroy(this.gameObject);
-        ManagerDeNivel.CantidadDeCucarachas--;
-        print("Muerte");
+
+    }
+    public virtual void AtaqueEspecial()
+    {
+
     }
 }
 

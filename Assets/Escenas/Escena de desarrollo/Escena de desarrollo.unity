@@ -218,6 +218,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &166523851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5598912519392215871, guid: e2834fe58e6fcae4f9816385620d395f, type: 3}
+  m_PrefabInstance: {fileID: 5598912520145392293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &166523852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166523851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9010c0ec091ca144a83a515398d3d57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 20
+  Velocidad: 20
+  AleatoriedadDeGiro: 20
+  Nerviosa: 1
 --- !u!1 &243135704
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1029436603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,5 +1347,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cucaracha
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5598912519392215870, guid: e2834fe58e6fcae4f9816385620d395f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2834fe58e6fcae4f9816385620d395f, type: 3}
