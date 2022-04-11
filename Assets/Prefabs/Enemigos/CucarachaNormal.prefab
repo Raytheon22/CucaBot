@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3554321017903340252}
   - component: {fileID: 3554321017903340255}
   - component: {fileID: 3554321017903340254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CucarachaNormal
-  m_TagString: Untagged
+  m_TagString: Enemigos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763b2eae9dea69d46b2e1f692c5a2628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vida: 100
-  Velocidad: 15
+  ResistenciaDeGolpe: 2
+  Velocidad: 16
   AleatoriedadDeGiro: 60
   Nerviosa: 2

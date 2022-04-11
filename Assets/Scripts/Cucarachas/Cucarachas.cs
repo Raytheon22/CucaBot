@@ -5,10 +5,13 @@ using UnityEngine;
 public abstract class Cucarachas : MonoBehaviour
 {
     //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
-    [SerializeField] int Vida;
+    [SerializeField] int ResistenciaDeGolpe;
     [SerializeField] int Velocidad;
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
+    private int CantidadDeGolpesRecibidos;
+    private bool Herida;
+
 
     void Start()
     {
@@ -42,14 +45,25 @@ public abstract class Cucarachas : MonoBehaviour
             }
         }
     }
+
+    public virtual void AtaqueEspecial()
+    {
+
+    }
+    public virtual void RecibirDaño()
+    {
+        Herida = true;
+        Velocidad = Velocidad / 2;
+        CantidadDeGolpesRecibidos++;
+        if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe)
+        {
+            Morir();
+        }
+    }
     public virtual void Morir()
     {
         ManagerDeNivel.CantidadDeCucarachas.Remove(this);
         Destroy(this.gameObject);
-    }
-    public virtual void AtaqueEspecial()
-    {
-
     }
 }
 

@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
         }
         for (int n = 0; n < CantidadPorSpawn; n++)
         {
-            Instantiate(Entidad[Random.Range(0, 3)], transform.position, transform.rotation);
+            Instantiate(Entidad[Random.Range(0, Entidad.Length)], transform.position, transform.rotation);
         }
     }
 }
