@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] int TiempoDeSpawn;
     [SerializeField] int OrdenDeSpawn;
     [SerializeField] int CantidadPorSpawn;
-    [SerializeField] GameObject Entidad;
+    [SerializeField] GameObject[] Entidad;
 
     void Start()
     {
@@ -27,8 +27,7 @@ public class Spawner : MonoBehaviour
         }
         for (int n = 0; n < CantidadPorSpawn; n++)
         {
-
-            Instantiate(Entidad, transform.position, transform.rotation);
+            Instantiate(Entidad[Random.Range(0, 3)], transform.position, transform.rotation);
         }
     }
 }
