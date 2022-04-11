@@ -17,14 +17,7 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        if (ManagerDeNivel.CantidadDeCucarachas > 10)
-        {
-            PuedeSpawnear = false;
-        }
-        else
-        {
-            PuedeSpawnear = true;
-        }
+
     }
     void SpawnearEntidad() //*RECURSIVIDAD.
     {
@@ -34,7 +27,7 @@ public class Spawner : MonoBehaviour
         }
         for (int n = 0; n < CantidadPorSpawn; n++)
         {
-            ManagerDeNivel.CantidadDeCucarachas++;
+
             Instantiate(Entidad, transform.position, transform.rotation);
         }
     }

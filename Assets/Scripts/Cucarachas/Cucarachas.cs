@@ -13,6 +13,7 @@ public abstract class Cucarachas : MonoBehaviour
     void Start()
     {
         Rotacion();
+        ManagerDeNivel.CantidadDeCucarachas.Add(this);
     }
     void Update()
     {
@@ -43,7 +44,8 @@ public abstract class Cucarachas : MonoBehaviour
     }
     public virtual void Morir()
     {
-
+        ManagerDeNivel.CantidadDeCucarachas.Remove(this);
+        Destroy(this.gameObject);
     }
     public virtual void AtaqueEspecial()
     {

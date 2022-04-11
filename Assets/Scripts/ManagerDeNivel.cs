@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class ManagerDeNivel : MonoBehaviour
 {
-    private static ManagerDeNivel EstadoDelNivel;
-    public static int CantidadDeCucarachas = 0;
-    public static int CucarachasAsesinadas = 0;
+    public static List<Cucarachas> CantidadDeCucarachas;
+    public static int CucarachasMuertas;
     public static bool Pausa;
 
-    void Awake() //* DECLARACION DEL SINGLETON
+    void Start()
     {
-        if (EstadoDelNivel == null)
+        Pausa = false;
+        CantidadDeCucarachas = new List<Cucarachas>();
+    }
+    void Update()
+    {
+        if (CantidadDeCucarachas.Count > 20)
         {
-            EstadoDelNivel = this;
-            DontDestroyOnLoad(this.gameObject);
+            Debug.Log("Perdio");
         }
-        else
+        if (CucarachasMuertas > 1)
         {
-            Destroy(this);
+            Debug.Log("Jefe");
         }
-
     }
 }

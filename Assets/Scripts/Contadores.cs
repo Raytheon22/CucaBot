@@ -13,6 +13,6 @@ public class Contadores : MonoBehaviour
 
     void Update()
     {
-        this.gameObject.GetComponent<Text>().text = "Contador de Cucas: " + ManagerDeNivel.CucarachasAsesinadas;
+        this.gameObject.GetComponent<Text>().text = "Contador de Cucas: " + ManagerDeNivel.CantidadDeCucarachas.Count;
     }
 }

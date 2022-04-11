@@ -11,8 +11,7 @@ public class EstadoDelJugador : MonoBehaviour
     [SerializeField] Lanzamiento Script;
     void Start()
     {
-        ManagerDeNivel.CucarachasAsesinadas = 0;
-        ManagerDeNivel.CantidadDeCucarachas = 0;
+
         Script = Mano.GetComponent<Lanzamiento>();
     }
 

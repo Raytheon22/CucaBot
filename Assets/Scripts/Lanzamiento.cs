@@ -16,7 +16,6 @@ public class Lanzamiento : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(FuerzaDeLanzamiento);
         if ((Input.GetKeyDown(KeyCode.Mouse0)))
         {
             CargandoLanzamiento = true;
