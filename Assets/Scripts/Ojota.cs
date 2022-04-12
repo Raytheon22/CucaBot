@@ -44,7 +44,7 @@ public class Ojota : MonoBehaviour
     {
         if (Regresando == true)
         {
-            if (Vector3.Distance(transform.position, UbicacionManoJugador.transform.position) < 0.1f)
+            if (Vector3.Distance(transform.position, UbicacionManoJugador.transform.position) < 0.5f)
             {
                 ManagerDeNivel.CantidadDeOjotas--;
                 Debug.Log("Volver");

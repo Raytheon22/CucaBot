@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManagerDeNivel : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ManagerDeNivel : MonoBehaviour
     public static int CucarachasMuertas;
     public static bool Pausa;
     public static int CantidadDeOjotas;
+    public GameObject Jefe;
 
     void Start()
     {
@@ -16,13 +18,13 @@ public class ManagerDeNivel : MonoBehaviour
     }
     void Update()
     {
-        if (CantidadDeCucarachas.Count > 20)
+        if (CantidadDeCucarachas.Count > 40)
         {
-            Debug.Log("Perdio");
+            SceneManager.LoadScene("Menu");
         }
-        if (CucarachasMuertas > 1)
+        if (CucarachasMuertas > 20)
         {
-            Debug.Log("Jefe");
+            Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
     }
 }

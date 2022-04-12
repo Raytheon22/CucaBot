@@ -112,3 +112,4 @@ MonoBehaviour:
   Velocidad: 10
   AleatoriedadDeGiro: 40
   Nerviosa: 4
+  Sensor: 0.5

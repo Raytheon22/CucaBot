@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public abstract class Cucarachas : MonoBehaviour
 {
     //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
     [SerializeField] int ResistenciaDeGolpe;
-    [SerializeField] int Velocidad;
+    public int Velocidad;
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
+    [SerializeField] float Sensor;
     private int CantidadDeGolpesRecibidos;
     private bool Herida;
-
-
     void Start()
     {
         Rotacion();
@@ -36,8 +34,8 @@ public abstract class Cucarachas : MonoBehaviour
     private void Sensores()
     {
         RaycastHit Objetivo;
-        Debug.DrawRay(transform.position, transform.forward * 0.5f, Color.blue);
-        if (Physics.Raycast(transform.position, transform.forward, out Objetivo, 0.5f))
+        Debug.DrawRay(transform.position, transform.forward * Sensor, Color.blue);
+        if (Physics.Raycast(transform.position, transform.forward, out Objetivo, Sensor))
         {
             if (Objetivo.transform.tag == "Escenario")
             {
