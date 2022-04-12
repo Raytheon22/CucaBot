@@ -7,14 +7,11 @@ public class EstadoDelJugador : MonoBehaviour
     //! Este script se encarga de manipular los estados del jugador.
 
     [SerializeField] int Vida;
-    [SerializeField] GameObject Mano;
-    [SerializeField] Lanzamiento Script;
+    private Arma Script;
     void Start()
     {
-
-        Script = Mano.GetComponent<Lanzamiento>();
+        Script = GetComponentInChildren<Arma>();
     }
-
     void Update()
     {
         if (ManagerDeNivel.Pausa)

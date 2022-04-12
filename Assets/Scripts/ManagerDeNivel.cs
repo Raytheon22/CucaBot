@@ -7,6 +7,7 @@ public class ManagerDeNivel : MonoBehaviour
     public static List<Cucarachas> CantidadDeCucarachas;
     public static int CucarachasMuertas;
     public static bool Pausa;
+    public static int CantidadDeOjotas;
 
     void Start()
     {
