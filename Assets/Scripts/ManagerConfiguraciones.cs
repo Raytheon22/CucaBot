@@ -26,7 +26,6 @@ public class ManagerConfiguraciones : MonoBehaviour
     }
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         Sensibilidad = 100;
         VolumenEfectos = 80;
         VolumenMusica = 80;

@@ -17,10 +17,12 @@ public class EstadoDelJugador : MonoBehaviour
         if (ManagerDeNivel.Pausa)
         {
             Script.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             Script.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

@@ -11,6 +11,7 @@ public class Interfaz : MonoBehaviour
     void Start()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void CargarNivel(string NombreDeNivel)
     {
