@@ -46,7 +46,7 @@ public class Ojota : MonoBehaviour
                 Destroy(this.gameObject);
             }
             transform.position = Vector3.MoveTowards(transform.position, UbicacionManoJugador.transform.position, 100 * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, UbicacionManoJugador.transform.rotation, 500 * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, UbicacionManoJugador.transform.rotation, 800 * Time.deltaTime);
         }
     }
 }

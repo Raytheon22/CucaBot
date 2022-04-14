@@ -59,6 +59,7 @@ public abstract class Cucarachas : MonoBehaviour
     }
     public virtual void Morir()
     {
+        ManagerDeNivel.CargaDeAerosol++;
         ManagerDeNivel.CucarachasMuertas++;
         ManagerDeNivel.CantidadDeCucarachas.Remove(this);
         Destroy(this.gameObject);

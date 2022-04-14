@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Enemigos
   - Escenario
-  - Municion
   layers:
   - Default
   - TransparentFX
@@ -16,9 +15,9 @@ TagManager:
   - UI
   - Ojota
   - Jugador
-  - Enemigo
-  - 
-  - 
+  - Cucarachas
+  - Aerosol
+  - Jefe
   - 
   - 
   - 

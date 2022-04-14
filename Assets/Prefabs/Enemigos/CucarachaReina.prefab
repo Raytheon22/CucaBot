@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1242409043006653040}
   - component: {fileID: 1242409043006653041}
   - component: {fileID: 6708038794791564573}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: CucarachaReina
   m_TagString: Enemigos
   m_Icon: {fileID: 0}
