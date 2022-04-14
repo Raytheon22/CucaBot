@@ -19,7 +19,7 @@ public class CucarachaReina : Cucarachas
     public override void AtaqueEspecial()
     {
         base.AtaqueEspecial();
-        for (int n = 0; n < 4; n++)
+        for (int n = 0; n < 2; n++)
         {
             Instantiate(Entidad[Random.Range(0, Entidad.Length)], transform.position, transform.rotation);
         }

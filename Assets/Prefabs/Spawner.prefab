@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1242409043006653043
+--- !u!1 &4206703571208085578
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1242409043006653046}
-  - component: {fileID: 1242409043006653047}
-  - component: {fileID: 1242409043006653040}
-  - component: {fileID: 1242409043006653041}
-  - component: {fileID: 6708038794791564573}
-  m_Layer: 10
-  m_Name: CucarachaReina
-  m_TagString: Enemigos
+  - component: {fileID: 4206703571208085583}
+  - component: {fileID: 4206703571208085582}
+  - component: {fileID: 4206703571208085581}
+  - component: {fileID: 4206703571208085580}
+  - component: {fileID: 4206703571208085579}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Escenario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1242409043006653046
+--- !u!4 &4206703571208085583
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242409043006653043}
+  m_GameObject: {fileID: 4206703571208085578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.97, y: 0.54, z: 9.38361}
-  m_LocalScale: {x: 2.7318, y: 1.056296, z: 4.0609846}
+  m_LocalPosition: {x: -14.465081, y: 0.726, z: 34.28}
+  m_LocalScale: {x: 0.45838, y: 0.45838, z: 0.45838}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1242409043006653047
+--- !u!33 &4206703571208085582
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242409043006653043}
+  m_GameObject: {fileID: 4206703571208085578}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1242409043006653040
+--- !u!23 &4206703571208085581
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242409043006653043}
+  m_GameObject: {fileID: 4206703571208085578}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 954981654fdf9404388d4726efd4dc7b, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,38 +83,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1242409043006653041
+--- !u!65 &4206703571208085580
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242409043006653043}
+  m_GameObject: {fileID: 4206703571208085578}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6708038794791564573
+--- !u!114 &4206703571208085579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242409043006653043}
+  m_GameObject: {fileID: 4206703571208085578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371625e0e012b344697fbbc099f0e595, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1f648fbfd744943a0450a5676481ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResistenciaDeGolpe: 5
-  Velocidad: 15
-  TiempoDeAtaqueEspecial: 20
-  AleatoriedadDeGiro: 180
-  Nerviosa: 1
-  Sensor: 0.5
+  PuedeSpawnear: 1
+  TiempoDeSpawn: 10
+  OrdenDeSpawn: 0
+  CantidadPorSpawn: 2
   Entidad:
+  - {fileID: 2862225257741107845, guid: 85a92c8fedaccf444b024a597470ecf8, type: 3}
+  - {fileID: 3554321017903340241, guid: 8f5b512a876766d48b18d1a665d2a98a, type: 3}
   - {fileID: 2463544633895734917, guid: 9bee804dc4bd67a4982b7cd830fd6fef, type: 3}
   - {fileID: 5488289047062619774, guid: 2d33ee9ca464b2845867c364bea87645, type: 3}
-  - {fileID: 3554321017903340241, guid: 8f5b512a876766d48b18d1a665d2a98a, type: 3}
