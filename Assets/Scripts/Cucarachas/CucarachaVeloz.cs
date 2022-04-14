@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CucarachaVeloz : Cucarachas
 {
-    public override void RecibirDaño()
+    public override void RecibirDaño(int Daño)
     {
         Morir();
     }

@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bd042ae0ac5bc44be5a17b8841aad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jefe: {fileID: 0}
+  Jefe: {fileID: 1242409043006653043, guid: 785765308ee309b46a55e89eea2b0962, type: 3}
 --- !u!65 &106448851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1047,9 +1047,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuedeSpawnear: 1
-  TiempoDeSpawn: 4
+  TiempoDeSpawn: 10
   OrdenDeSpawn: 0
-  CantidadPorSpawn: 3
+  CantidadPorSpawn: 2
   Entidad:
   - {fileID: 2862225257741107845, guid: 85a92c8fedaccf444b024a597470ecf8, type: 3}
   - {fileID: 3554321017903340241, guid: 8f5b512a876766d48b18d1a665d2a98a, type: 3}

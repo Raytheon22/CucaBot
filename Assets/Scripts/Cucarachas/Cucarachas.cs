@@ -25,7 +25,7 @@ public abstract class Cucarachas : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Velocidad * Time.deltaTime);
     }
-    private void Rotacion()
+    protected void Rotacion()
     {
         int VelocidadRotacion = 1 * Random.Range(-AleatoriedadDeGiro, AleatoriedadDeGiro);
         transform.Rotate(0, VelocidadRotacion, 0);
@@ -43,17 +43,16 @@ public abstract class Cucarachas : MonoBehaviour
             }
         }
     }
-
     public virtual void AtaqueEspecial()
     {
 
     }
-    public virtual void RecibirDaño()
+    public virtual void RecibirDaño(int Daño)
     {
         Herida = true;
         Velocidad = Velocidad / 2;
-        CantidadDeGolpesRecibidos++;
-        if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe)
+        CantidadDeGolpesRecibidos += Daño;
+        if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
         {
             Morir();
         }

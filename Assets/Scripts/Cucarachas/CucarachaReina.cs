@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class CucarachaReina : Cucarachas
 {
     //! FALTA PULIR Y AGREGAR COSAS
-    public override void RecibirDaño()
+    void Start()
     {
-        base.RecibirDaño();
+        Rotacion();
+    }
+    public override void RecibirDaño(int Daño)
+    {
+        base.RecibirDaño(Daño);
         Velocidad = Velocidad * 2;
     }
     public override void Morir()

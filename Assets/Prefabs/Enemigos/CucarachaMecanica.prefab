@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecff5ef40285db468a80a263bf61eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResistenciaDeGolpe: 2
-  Velocidad: 10
+  ResistenciaDeGolpe: 1
+  Velocidad: 5
   AleatoriedadDeGiro: 40
   Nerviosa: 3
   Sensor: 0.5

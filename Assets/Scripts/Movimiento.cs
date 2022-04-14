@@ -61,7 +61,6 @@ public class Movimiento : MonoBehaviour
         //*MRUV CAIDA LIBRE
         VelocidadY = VelocidadY + Physics.gravity.y * Time.deltaTime;
         Jugador.Move(new Vector3(0, VelocidadY, 0) * Time.deltaTime);
-        //Debug.Log("Velocidad final: " + VelocidadY); //! CONTROL
 
         //*EL JUGADOR ESTA EN EL SUELO?
         if (Jugador.isGrounded)

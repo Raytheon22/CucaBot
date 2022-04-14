@@ -9,28 +9,24 @@ public class Ojota : MonoBehaviour
     private GameObject UbicacionManoJugador;
     void OnCollisionEnter(Collision ObjetoColisionado)
     {
+
         if (ObjetoColisionado.gameObject.tag == "Enemigos")
         {
-            ObjetoColisionado.gameObject.SendMessage("RecibirDaño");
+            ObjetoColisionado.gameObject.SendMessage("RecibirDaño", 1);
             Invoke("Regresar", 0.5f);
         }
         else
         {
             Invoke("Regresar", 1);
         }
-
     }
     public void RecibirInformacion(GameObject Ubicacion)
     {
         UbicacionManoJugador = Ubicacion;
     }
 
-    void Update() //! PRUEBA
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            Regresar();
-        }
         MovimientoDeRegreso();
     }
     void Regresar()
@@ -47,7 +43,6 @@ public class Ojota : MonoBehaviour
             if (Vector3.Distance(transform.position, UbicacionManoJugador.transform.position) < 0.5f)
             {
                 ManagerDeNivel.CantidadDeOjotas--;
-                Debug.Log("Volver");
                 Destroy(this.gameObject);
             }
             transform.position = Vector3.MoveTowards(transform.position, UbicacionManoJugador.transform.position, 100 * Time.deltaTime);
