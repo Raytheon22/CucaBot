@@ -16,17 +16,17 @@ public class EstadoDelJugador : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(ManagerDeNivel.CargaDeAerosol);
         ArmasDelJugador();
         Pausa();
     }
     void ArmasDelJugador()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && ManagerDeNivel.CargaDeAerosol >= 1)
+        if (Input.GetKeyDown(KeyCode.Z) && ManagerDeNivel.CargaDeAerosol >= 10)
         {
             Armas[0].SetActive(false);
             Armas[1].SetActive(true);
             ArmaActual = Armas[1];
-            Debug.Log("Aerosol");
         }
 
         if (ManagerDeNivel.CargaDeAerosol == 0)
@@ -34,7 +34,6 @@ public class EstadoDelJugador : MonoBehaviour
             Armas[0].SetActive(true);
             Armas[1].SetActive(false);
             ArmaActual = Armas[0];
-            Debug.Log("Ojota");
         }
     }
     void Pausa()

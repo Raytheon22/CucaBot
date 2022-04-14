@@ -8,5 +8,9 @@ public class CucarachaVeloz : Cucarachas
     {
         Morir();
     }
+    public override void AtaqueEspecial()
+    {
+
+    }
 }
 

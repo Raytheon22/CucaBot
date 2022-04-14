@@ -6,6 +6,7 @@ public abstract class Cucarachas : MonoBehaviour
     //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
     [SerializeField] int ResistenciaDeGolpe;
     public int Velocidad;
+    [SerializeField] protected int TiempoDeAtaqueEspecial;
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
     [SerializeField] float Sensor;
@@ -15,6 +16,8 @@ public abstract class Cucarachas : MonoBehaviour
     {
         Rotacion();
         ManagerDeNivel.CantidadDeCucarachas.Add(this);
+        Invoke("AtaqueEspecial", TiempoDeAtaqueEspecial);
+
     }
     void Update()
     {
@@ -45,7 +48,7 @@ public abstract class Cucarachas : MonoBehaviour
     }
     public virtual void AtaqueEspecial()
     {
-
+        Invoke("AtaqueEspecial", TiempoDeAtaqueEspecial);
     }
     public virtual void RecibirDaño(int Daño)
     {
@@ -63,6 +66,16 @@ public abstract class Cucarachas : MonoBehaviour
         ManagerDeNivel.CucarachasMuertas++;
         ManagerDeNivel.CantidadDeCucarachas.Remove(this);
         Destroy(this.gameObject);
+    }
+
+    public virtual void Curarse()
+    {
+        if (Herida == true)
+        {
+            Velocidad = Velocidad * CantidadDeGolpesRecibidos * 2;
+            CantidadDeGolpesRecibidos = 0;
+            Herida = false;
+        }
     }
 }
 

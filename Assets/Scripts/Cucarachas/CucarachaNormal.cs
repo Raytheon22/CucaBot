@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class CucarachaNormal : Cucarachas
 {
+    public override void AtaqueEspecial()
+    {
 
+    }
 }

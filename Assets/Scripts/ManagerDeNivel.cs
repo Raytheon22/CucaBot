@@ -23,7 +23,7 @@ public class ManagerDeNivel : MonoBehaviour
     }
     void Update()
     {
-        if (CucarachasMuertas == 10 && JefeInstanciado == false)
+        if (CucarachasMuertas == 20 && JefeInstanciado == false)
         {
             Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
             JefeInstanciado = true;

@@ -24,7 +24,7 @@ public class ArmaAerosol : MonoBehaviour
     {
         if (ObjetoColisionado.gameObject.tag == "Enemigos")
         {
-            ObjetoColisionado.gameObject.SendMessage("RecibirDaño", 5);
+            ObjetoColisionado.gameObject.SendMessage("RecibirDaño", 1);
         }
     }
 

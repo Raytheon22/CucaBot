@@ -110,6 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResistenciaDeGolpe: 5
   Velocidad: 15
+  TiempoDeAtaqueEspecial: 10
   AleatoriedadDeGiro: 180
   Nerviosa: 1
   Sensor: 0.5
+  Entidad:
+  - {fileID: 2463544633895734917, guid: 9bee804dc4bd67a4982b7cd830fd6fef, type: 3}
+  - {fileID: 5488289047062619774, guid: 2d33ee9ca464b2845867c364bea87645, type: 3}
+  - {fileID: 3554321017903340241, guid: 8f5b512a876766d48b18d1a665d2a98a, type: 3}
