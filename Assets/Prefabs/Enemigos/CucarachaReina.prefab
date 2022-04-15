@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371625e0e012b344697fbbc099f0e595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResistenciaDeGolpe: 5
+  ResistenciaDeGolpe: 10
   Velocidad: 15
   TiempoDeAtaqueEspecial: 20
   AleatoriedadDeGiro: 180

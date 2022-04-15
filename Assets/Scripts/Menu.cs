@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Interfaz : MonoBehaviour
+public class Menu : MonoBehaviour
 {
-    //!Este script se encarga de realizar las operaciones de la interfaz.
-
-    public GameObject UIOpciones;
+    [SerializeField] GameObject UIOpciones;
     void Start()
     {
         Cursor.visible = true;
@@ -23,21 +20,12 @@ public class Interfaz : MonoBehaviour
     }
     public void Opciones()
     {
-        Instantiate(UIOpciones, Vector3.zero, Quaternion.identity);
+        GameObject UI = Instantiate(UIOpciones, Vector3.zero, Quaternion.identity);
+        UI.SendMessage("RecibirUiAnterior", this.gameObject);
+        this.gameObject.SetActive(false);
     }
     public void Salir()
     {
         Application.Quit();
-    }
-    public void Atras()
-    {
-        Destroy(this.gameObject);
-    }
-    public void VolverAlJuego()
-    {
-        Time.timeScale = 1;
-        Cursor.visible = false;
-        ManagerDeNivel.Pausa = false;
-        Destroy(this.gameObject);
     }
 }

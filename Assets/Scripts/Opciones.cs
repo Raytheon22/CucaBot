@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Opciones : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Opciones : MonoBehaviour
     [SerializeField] Slider Sensibilidad;
     [SerializeField] Slider VolumenMusica;
     [SerializeField] Slider VolumenEfecto;
+
+    private GameObject UIAnterior;
 
     void Awake()
     {
@@ -33,5 +36,13 @@ public class Opciones : MonoBehaviour
             ManagerConfiguraciones.VolumenEfectos = (int)VolumenEfecto.value;
         }
     }
-
+    public void RecibirUiAnterior(GameObject UI)
+    {
+        UIAnterior = UI;
+    }
+    public void Atras()
+    {
+        UIAnterior.SetActive(true);
+        Destroy(this.gameObject);
+    }
 }

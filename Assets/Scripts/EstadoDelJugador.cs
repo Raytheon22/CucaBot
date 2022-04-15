@@ -16,7 +16,6 @@ public class EstadoDelJugador : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(ManagerDeNivel.CargaDeAerosol);
         ArmasDelJugador();
         Pausa();
     }
