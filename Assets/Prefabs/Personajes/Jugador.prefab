@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5189400479661351320}
-  m_Layer: 7
-  m_Name: ManoJugador
+  - component: {fileID: 1358799160}
+  m_Layer: 6
+  m_Name: ArmaOjota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,13 +24,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2725836321928739490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.008589904, y: -0.008589904, z: 0.7070546, w: 0.7070546}
+  m_LocalPosition: {x: 0.47000003, y: 0.403, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4511723102763192751}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.392, z: 90}
+--- !u!114 &1358799160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725836321928739490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73632593cb3432e488fa3d28aa86fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chancla: {fileID: 3520062141321559237, guid: 88731233db7267f449a5225ab6064d68, type: 3}
+  LimiteDeLanzamiento: 150
 --- !u!1 &3614212926354316936
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +57,9 @@ GameObject:
   - component: {fileID: 8784279247630769092}
   - component: {fileID: 7439268791553819139}
   - component: {fileID: 965455247620686043}
-  m_Layer: 7
+  - component: {fileID: 1207971358}
+  - component: {fileID: 1207971359}
+  m_Layer: 9
   m_Name: ArmaAerosol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +141,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70691d6ae93375498627f7407b6ff62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DuracionDeAerosol: 0
+  DuracionDeAerosol: 5
+--- !u!136 &1207971358
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614212926354316936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 37.2
+  m_Height: 63.02
+  m_Direction: 2
+  m_Center: {x: 0.000001013279, y: 0, z: 25.16}
+--- !u!54 &1207971359
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614212926354316936}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4511723102763192786
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,4 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c3f422aaf301e44597fd985ea38af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Armas: []
+  Armas:
+  - {fileID: 2725836321928739490}
+  - {fileID: 3614212926354316936}

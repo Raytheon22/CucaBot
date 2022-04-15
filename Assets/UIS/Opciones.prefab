@@ -68,10 +68,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6f6a2001837b9cb43ae4e33dba7b5ba4, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 40
+    m_MinSize: 30
     m_MaxSize: 150
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -80,7 +80,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Music Volume:
-
 
 '
 --- !u!114 &1644310343051626322
@@ -1463,10 +1462,10 @@ RectTransform:
   m_Father: {fileID: 6420365414409290293}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.795, y: 0.11127624}
-  m_AnchorMax: {x: 0.9525944, y: 0.215}
-  m_AnchoredPosition: {x: 1, y: 0.4000244}
-  m_SizeDelta: {x: -1, y: 2}
+  m_AnchorMin: {x: 0.7865944, y: 0.100851856}
+  m_AnchorMax: {x: 0.92341274, y: 0.2238148}
+  m_AnchoredPosition: {x: 0, y: 1.4998779}
+  m_SizeDelta: {x: -2, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6420365414485672523
 CanvasRenderer:
@@ -1777,10 +1776,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6f6a2001837b9cb43ae4e33dba7b5ba4, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 40
+    m_MinSize: 30
     m_MaxSize: 150
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1789,7 +1788,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Effects Volume:
-
 
 '
 --- !u!114 &3176522163283181095
@@ -1875,10 +1873,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6f6a2001837b9cb43ae4e33dba7b5ba4, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 40
+    m_MinSize: 30
     m_MaxSize: 150
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1887,7 +1885,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Mouse Sensitivity:
-
 
 '
 --- !u!114 &5779468533136320525

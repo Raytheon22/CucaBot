@@ -21,7 +21,7 @@ public class EstadoDelJugador : MonoBehaviour
     }
     void ArmasDelJugador()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && ManagerDeNivel.CargaDeAerosol >= 10)
+        if (Input.GetKeyDown(KeyCode.Z) && ManagerDeNivel.CargaDeAerosol >= 1)
         {
             Armas[0].SetActive(false);
             Armas[1].SetActive(true);
