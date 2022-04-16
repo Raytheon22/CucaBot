@@ -111,11 +111,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6273216705233819075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ebbe53bb6f3814f966f89b802499ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e59a212c8e7f0e478c85d0b8b91c95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UIPausa: {fileID: 3677648967568094965, guid: c3cdf7897b892c0469f0165aa3606de6, type: 3}
-  UIFondo: {fileID: 7118623000058735538, guid: 43817d5760103654c9548f1a36ead1c9, type: 3}
 --- !u!1 &6273216705565693304
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +204,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6273216705565693304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd1f8ac27ff4cf4b85725b106615e98, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ae9fa2f117654349b2daad97af1820a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6273216705968306823

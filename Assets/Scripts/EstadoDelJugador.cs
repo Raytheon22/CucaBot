@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EstadoDelJugador : MonoBehaviour
 {
-    //! Este script se encarga de manipular los estados del jugador y sus armas.
+
 
     [SerializeField] GameObject[] Armas;
     private GameObject ArmaActual;

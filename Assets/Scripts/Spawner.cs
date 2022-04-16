@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    //! Este script se encarga de administrar los spawners.
     [SerializeField] bool PuedeSpawnear;
     [SerializeField] int TiempoDeSpawn;
     [SerializeField] int OrdenDeSpawn;

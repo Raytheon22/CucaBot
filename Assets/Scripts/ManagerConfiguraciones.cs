@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ManagerConfiguraciones : MonoBehaviour
 {
-    //! Este script se encarga de administrar las configuraciones del juego.
-
     private static ManagerConfiguraciones ConfiguracionesJuego;
-    public static int VolumenMusica = 100;
-    public static int VolumenEfectos = 80;
+    public static float VolumenMusica = 0.3f;
+    public static float VolumenEfectos = 0.4f;
     public static int Sensibilidad = 200;
 
     void Awake() //* DECLARACION DEL SINGLETON
@@ -22,13 +20,6 @@ public class ManagerConfiguraciones : MonoBehaviour
         {
             Destroy(this);
         }
-
-    }
-    void Start()
-    {
-        Sensibilidad = 100;
-        VolumenEfectos = 80;
-        VolumenMusica = 80;
     }
 
 }

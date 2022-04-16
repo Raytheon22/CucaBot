@@ -306,7 +306,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381142587614615859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bcf4ee3232e2794bb79d83fe97a6f76, type: 3}
+  m_Script: {fileID: 11500000, guid: d135d01239751a244bec90ff110b95eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UIOpciones: {fileID: 6420365414409290302, guid: 7bf7bd7f98dee4a41b4c5b196746a9ce, type: 3}
@@ -431,8 +431,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Botones, Assembly-CSharp
+      - m_Target: {fileID: 3099409507454689383}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: CargarNivel
         m_Mode: 5
         m_Arguments:
@@ -564,16 +564,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Interfaz, Assembly-CSharp
+      - m_Target: {fileID: 3099409507454689383}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Opciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Escena de desarrollo
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1381142588731709107
@@ -806,7 +806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7865944, y: 0.100851856}
   m_AnchorMax: {x: 0.92341274, y: 0.2238148}
-  m_AnchoredPosition: {x: 0, y: 1.4999084}
+  m_AnchoredPosition: {x: 0, y: 1.4998779}
   m_SizeDelta: {x: -2, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4456260193625531557
@@ -891,9 +891,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Interfaz, Assembly-CSharp
-        m_MethodName: Opciones
+      - m_Target: {fileID: 3099409507454689383}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: Salir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

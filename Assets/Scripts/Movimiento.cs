@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    //!Este script se encarga de realizar el movimiento del personaje y modificar su horientacion. 
+
     private CharacterController Jugador;
     private float VelocidadY;
     [SerializeField] float Aceleracion;

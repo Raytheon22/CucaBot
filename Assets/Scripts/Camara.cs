@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-    //!Este script se encarga de realizar la rotacion de la camara.
+
     private float AceleracionY;
 
     void Update()

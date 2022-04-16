@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArmaOjota : MonoBehaviour
 {
-    //! Este script se encarga de administrar el lanzamiento de objetos.
+
     [SerializeField] GameObject chancla;
     private GameObject ObjetoInstanciado;
     private float FuerzaDeLanzamiento;
