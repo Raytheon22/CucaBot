@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3554321017903340252}
   - component: {fileID: 3554321017903340255}
   - component: {fileID: 3554321017903340254}
+  - component: {fileID: 5557031930896562439}
   m_Layer: 8
   m_Name: CucarachaNormal
   m_TagString: Enemigos
@@ -110,6 +111,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResistenciaDeGolpe: 2
   Velocidad: 15
+  TiempoDeAtaqueEspecial: 0
   AleatoriedadDeGiro: 60
   Nerviosa: 2
   Sensor: 0.5
+--- !u!54 &5557031930896562439
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3554321017903340241}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

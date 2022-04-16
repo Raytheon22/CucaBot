@@ -45,6 +45,13 @@ public abstract class Cucarachas : MonoBehaviour
                 transform.rotation = Quaternion.FromToRotation(transform.up, Objetivo.normal) * transform.rotation;
             }
         }
+        RaycastHit Abajo;
+        Debug.DrawRay(transform.position, -transform.up * Sensor, Color.blue);
+        if (!Physics.Raycast(transform.position, -transform.up, out Abajo, Sensor))
+        {
+            Vector3 v = transform.rotation.eulerAngles;
+            transform.rotation = Quaternion.Euler(v.x, v.y, 0);
+        }
     }
     public virtual void AtaqueEspecial()
     {
