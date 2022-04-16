@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject UIOpciones;
     [SerializeField] GameObject UITutorial;
     [SerializeField] GameObject UIControles;
+    [SerializeField] GameObject Transicion;
+    [SerializeField] GameObject Sonido;
+    private bool CargarTransicion;
+    private float Alpha;
+    private float Volumen;
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
-
 
     public void Tutorial()
     {
@@ -30,7 +34,14 @@ public class Menu : MonoBehaviour
     }
     public void Jugar()
     {
+        Volumen = ManagerConfiguraciones.ConfiguracionesJuego.VolumenMusica;
         Efectos.reproducir();
+        Transicion.SetActive(true);
+        CargarTransicion = true;
+        Invoke("CargarNivel", 2);
+    }
+    private void CargarNivel()
+    {
         Time.timeScale = 1;
         Cursor.visible = false;
         ManagerDeNivel.Pausa = false;
@@ -48,4 +59,15 @@ public class Menu : MonoBehaviour
         Efectos.reproducir();
         Application.Quit();
     }
+    void Update()
+    {
+        if (CargarTransicion)
+        {
+            Volumen -= 0.5f * Time.deltaTime;
+            Musica.TransicionSonido(Volumen);
+            Alpha += 1 * Time.deltaTime;
+            Transicion.GetComponent<Image>().color = new Color(0, 0, 0, Alpha);
+        }
+    }
 }
+

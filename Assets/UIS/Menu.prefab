@@ -311,7 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIOpciones: {fileID: 6420365414409290302, guid: 7bf7bd7f98dee4a41b4c5b196746a9ce, type: 3}
   UITutorial: {fileID: 9180330511705434608, guid: b2eadcb01230c854a8022a02a32c08e5, type: 3}
-  UIControles: {fileID: 0}
+  UIControles: {fileID: 4010875277536351221, guid: 4066254ce7ba0254480c8ecde3ce409d, type: 3}
+  Transicion: {fileID: 0}
+  Sonido: {fileID: 0}
 --- !u!1 &1381142587864531026
 GameObject:
   m_ObjectHideFlags: 0

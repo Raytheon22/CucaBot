@@ -40,7 +40,7 @@ public class Movimiento : MonoBehaviour
     private void Rotacion()
     {
         //*MOVIMIENTO HORIZONTAL DE CAMARA
-        transform.Rotate(0, Input.GetAxis("Mouse X") * ManagerConfiguraciones.Sensibilidad * Time.deltaTime, 0); //!falta singleton de sensibilidad
+        transform.Rotate(0, Input.GetAxis("Mouse X") * ManagerConfiguraciones.ConfiguracionesJuego.Sensibilidad * Time.deltaTime, 0); //!falta singleton de sensibilidad
     }
     private void Salto()
     {

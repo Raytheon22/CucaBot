@@ -8,10 +8,11 @@ public class Efectos : MonoBehaviour
     void Start()
     {
         EfectoBoton = GetComponent<AudioSource>();
+        EfectoBoton.volume = ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos;
     }
     void Update()
     {
-        EfectoBoton.volume = ManagerConfiguraciones.VolumenEfectos;
+        EfectoBoton.volume = ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos;
     }
     public static void reproducir()
     {

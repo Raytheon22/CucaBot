@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ManagerConfiguraciones : MonoBehaviour
 {
-    private static ManagerConfiguraciones ConfiguracionesJuego;
-    public static float VolumenMusica = 0.3f;
-    public static float VolumenEfectos = 0.4f;
-    public static int Sensibilidad = 200;
+    public static ManagerConfiguraciones ConfiguracionesJuego;
+    public float VolumenMusica;
+    public float VolumenEfectos;
+    public int Sensibilidad;
 
     void Awake() //* DECLARACION DEL SINGLETON
     {
         if (ConfiguracionesJuego == null)
         {
+            VolumenMusica = 0.4f;
+            VolumenEfectos = 0.4f;
+            Sensibilidad = 200;
             ConfiguracionesJuego = this;
             DontDestroyOnLoad(this.gameObject);
         }
@@ -21,5 +24,4 @@ public class ManagerConfiguraciones : MonoBehaviour
             Destroy(this);
         }
     }
-
 }

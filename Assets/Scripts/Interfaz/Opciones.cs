@@ -11,26 +11,26 @@ public class Opciones : MonoBehaviour
     [SerializeField] Slider VolumenEfecto;
     private GameObject UIAnterior;
 
-    void Awake()
+    void Start()
     {
-        Sensibilidad.value = ManagerConfiguraciones.Sensibilidad;
-        VolumenMusica.value = ManagerConfiguraciones.VolumenMusica;
-        VolumenEfecto.value = ManagerConfiguraciones.VolumenEfectos;
+        Sensibilidad.value = ManagerConfiguraciones.ConfiguracionesJuego.Sensibilidad;
+        VolumenEfecto.value = ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos;
+        VolumenMusica.value = ManagerConfiguraciones.ConfiguracionesJuego.VolumenMusica;
     }
 
     void Update()
     {
-        if (Sensibilidad.value != ManagerConfiguraciones.Sensibilidad)
+        if (Sensibilidad.value != ManagerConfiguraciones.ConfiguracionesJuego.Sensibilidad)
         {
-            ManagerConfiguraciones.Sensibilidad = (int)Sensibilidad.value;
+            ManagerConfiguraciones.ConfiguracionesJuego.Sensibilidad = (int)Sensibilidad.value;
         }
-        if (VolumenMusica.value != ManagerConfiguraciones.VolumenMusica)
+        if (VolumenMusica.value != ManagerConfiguraciones.ConfiguracionesJuego.VolumenMusica)
         {
-            ManagerConfiguraciones.VolumenMusica = VolumenMusica.value;
+            ManagerConfiguraciones.ConfiguracionesJuego.VolumenMusica = VolumenMusica.value;
         }
-        if (VolumenEfecto.value != ManagerConfiguraciones.VolumenEfectos)
+        if (VolumenEfecto.value != ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos)
         {
-            ManagerConfiguraciones.VolumenEfectos = VolumenEfecto.value;
+            ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos = VolumenEfecto.value;
         }
     }
     public void RecibirUiAnterior(GameObject UI)
