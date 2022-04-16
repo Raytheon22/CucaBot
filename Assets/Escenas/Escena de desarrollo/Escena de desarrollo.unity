@@ -430,6 +430,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4511723103704790886, guid: b2fdea335294e3249b6bdf80fbf2af9a, type: 3}
+      propertyPath: HabilidadDeSaltar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4511723103704790887, guid: b2fdea335294e3249b6bdf80fbf2af9a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1290,6 +1294,10 @@ PrefabInstance:
     - target: {fileID: 3677648967568094965, guid: c3cdf7897b892c0469f0165aa3606de6, type: 3}
       propertyPath: m_Name
       value: Pausa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677648967568094965, guid: c3cdf7897b892c0469f0165aa3606de6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3cdf7897b892c0469f0165aa3606de6, type: 3}

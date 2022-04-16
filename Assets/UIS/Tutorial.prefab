@@ -453,10 +453,10 @@ RectTransform:
   m_Father: {fileID: 6711803057749105519}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.06941667, y: 0.31470373}
+  m_AnchorMin: {x: 0.06941667, y: 0.27800003}
   m_AnchorMax: {x: 0.8373334, y: 0.5324445}
-  m_AnchoredPosition: {x: -4.4572754, y: 0.51000977}
-  m_SizeDelta: {x: -2.3815002, y: -0.93910027}
+  m_AnchoredPosition: {x: -2.8239746, y: -0.5417023}
+  m_SizeDelta: {x: -5.6481, y: 1.1643982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3658097350362122683
 CanvasRenderer:
@@ -501,7 +501,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "You will lose if the amount of cockroaches exceeds 40.\nEvery time you
     have killed 10 cockroaches, you can use a insecticide in spray for 5 seconds.
-    \nYou win when you kill the cockroach with the crow....."
+    \nYou win when you kill the cockroach with the crow...it appears when she wants..."
 --- !u!114 &4174751241197308085
 MonoBehaviour:
   m_ObjectHideFlags: 0
