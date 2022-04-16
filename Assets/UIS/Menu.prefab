@@ -310,6 +310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIOpciones: {fileID: 6420365414409290302, guid: 7bf7bd7f98dee4a41b4c5b196746a9ce, type: 3}
+  UITutorial: {fileID: 9180330511705434608, guid: b2eadcb01230c854a8022a02a32c08e5, type: 3}
+  UIControles: {fileID: 0}
 --- !u!1 &1381142587864531026
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,8 +435,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3099409507454689383}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: CargarNivel
-        m_Mode: 5
+        m_MethodName: Tutorial
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -5,18 +5,36 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject UIOpciones;
+    [SerializeField] GameObject UITutorial;
+    [SerializeField] GameObject UIControles;
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-    public void CargarNivel(string NombreDeNivel)
+
+
+
+    public void Tutorial()
+    {
+        Efectos.reproducir();
+        GameObject UI = Instantiate(UITutorial, Vector3.zero, Quaternion.identity);
+        gameObject.SetActive(false);
+
+    }
+    public void Controles()
+    {
+        Efectos.reproducir();
+        GameObject UI = Instantiate(UIControles, Vector3.zero, Quaternion.identity);
+        gameObject.SetActive(false);
+    }
+    public void Jugar()
     {
         Efectos.reproducir();
         Time.timeScale = 1;
         Cursor.visible = false;
         ManagerDeNivel.Pausa = false;
-        SceneManager.LoadScene(NombreDeNivel);
+        SceneManager.LoadScene("Escena de desarrollo");
     }
     public void Opciones()
     {

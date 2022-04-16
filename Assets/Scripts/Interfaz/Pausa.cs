@@ -12,6 +12,7 @@ public class Pausa : MonoBehaviour
     {
         UIFondo.SetActive(true);
         Efectos.reproducir();
+        Cursor.visible = true;
     }
     public void Menu()
     {
