@@ -21,8 +21,8 @@ public abstract class Cucarachas : MonoBehaviour
     }
     void Update()
     {
-        Sensores();
         Movimiento();
+        Sensores();
     }
     private void Movimiento()
     {

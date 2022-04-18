@@ -13,7 +13,7 @@ public class ArmaOjota : MonoBehaviour
     [SerializeField] List<AudioClip> Sonidos;
     void Start()
     {
-        FuerzaDeLanzamiento = 2;
+        FuerzaDeLanzamiento = 50;
     }
     void Update()
     {
