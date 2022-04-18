@@ -35,7 +35,7 @@ public class ArmaOjota : MonoBehaviour
                 ObjetoInstanciado = Instantiate(chancla, transform.position, transform.rotation);
                 ObjetoInstanciado.SendMessage("RecibirInformacion", gameObject);
                 ObjetoInstanciado.GetComponent<Rigidbody>().AddForce(transform.forward * FuerzaDeLanzamiento, ForceMode.Impulse);
-                ObjetoInstanciado.GetComponent<Rigidbody>().AddTorque(transform.up * -2, ForceMode.Impulse);
+                ObjetoInstanciado.GetComponent<Rigidbody>().AddTorque(transform.up * -200, ForceMode.Impulse);
                 FuerzaDeLanzamiento = 50;
                 CargandoLanzamiento = false;
             }

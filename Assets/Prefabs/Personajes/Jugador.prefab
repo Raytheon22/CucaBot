@@ -239,7 +239,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -322,7 +322,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4511723103704790891}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Aceleracion: 10
   HabilidadDeSaltar: 1
-  FuerzaDeSalto: 4
+  FuerzaDeSalto: 3.5
 --- !u!114 &4511723103704790885
 MonoBehaviour:
   m_ObjectHideFlags: 0

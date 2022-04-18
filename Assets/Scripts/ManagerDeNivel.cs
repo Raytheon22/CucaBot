@@ -28,7 +28,7 @@ public class ManagerDeNivel : MonoBehaviour
             Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
             JefeInstanciado = true;
         }
-        if (CantidadDeCucarachas.Count > 40)
+        if (CantidadDeCucarachas.Count > 20000)
         {
             SceneManager.LoadScene("Menu");
         }
