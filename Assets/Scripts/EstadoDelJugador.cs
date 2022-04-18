@@ -25,6 +25,7 @@ public class EstadoDelJugador : MonoBehaviour
         {
             Armas[0].SetActive(false);
             Armas[1].SetActive(true);
+            Armas[2].SetActive(false); //ojota visual
             ArmaActual = Armas[1];
         }
 
@@ -32,6 +33,7 @@ public class EstadoDelJugador : MonoBehaviour
         {
             Armas[0].SetActive(true);
             Armas[1].SetActive(false);
+            Armas[2].SetActive(true); //ojota visual
             ArmaActual = Armas[0];
         }
     }

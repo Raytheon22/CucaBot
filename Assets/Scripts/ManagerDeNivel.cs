@@ -9,7 +9,7 @@ public class ManagerDeNivel : MonoBehaviour
     public static int CucarachasMuertas;
     public static bool Pausa;
     public static int CargaDeAerosol;
-    public static int CantidadDeOjotas;
+    public static bool OjotaEnEscena;
     public GameObject Jefe;
     public bool JefeInstanciado;
 
@@ -18,8 +18,8 @@ public class ManagerDeNivel : MonoBehaviour
         Pausa = false;
         CantidadDeCucarachas = new List<Cucarachas>();
         CargaDeAerosol = 0;
-        CantidadDeOjotas = 0;
         CucarachasMuertas = 0;
+        OjotaEnEscena = false;
     }
     void Update()
     {
