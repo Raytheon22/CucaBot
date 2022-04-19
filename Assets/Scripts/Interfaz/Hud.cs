@@ -9,6 +9,8 @@ public class Hud : MonoBehaviour
     [SerializeField] GameObject Transicion;
     [SerializeField] GameObject Arma;
     [SerializeField] GameObject Jugador;
+
+    [SerializeField] GameObject BarraDeVida;
     [SerializeField] GameObject PantallaVictoria;
     [SerializeField] GameObject PantallaDerrota;
     private bool CargarTransicion;
@@ -22,18 +24,10 @@ public class Hud : MonoBehaviour
     void Update()
     {
         ChequearVictoria();
-        Arma.GetComponent<Text>().text = "Power: " + (int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento + " %";
-        if ((int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento > 100)
+        CambiarPotencia();
+        if (ManagerDeNivel.JefeInstanciado)
         {
-            Arma.GetComponent<Text>().color = new Color(255, 255, 0, 255);
-        }
-        else
-        {
-            Arma.GetComponent<Text>().color = new Color(0, 255, 0, 255);
-        }
-        if ((int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento == 150)
-        {
-            Arma.GetComponent<Text>().color = new Color(255, 0, 0, 255);
+            BarraDeVida.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Escape) && ManagerDeNivel.Pausa == false)
         {
@@ -66,6 +60,22 @@ public class Hud : MonoBehaviour
         {
             PantallaDerrota.SetActive(true);
             PantallaVictoria.SetActive(false);
+        }
+    }
+    private void CambiarPotencia()
+    {
+        Arma.GetComponent<Text>().text = "Power: " + (int)(Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento / 150 * 100) + " %";
+        if ((int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento > 100)
+        {
+            Arma.GetComponent<Text>().color = new Color(255, 255, 0, 255);
+        }
+        else
+        {
+            Arma.GetComponent<Text>().color = new Color(0, 255, 0, 255);
+        }
+        if ((int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento == 150)
+        {
+            Arma.GetComponent<Text>().color = new Color(255, 0, 0, 255);
         }
     }
 }

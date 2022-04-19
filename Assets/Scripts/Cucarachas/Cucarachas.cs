@@ -4,15 +4,14 @@ using UnityEngine;
 public abstract class Cucarachas : MonoBehaviour
 {
     //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
-    [SerializeField] int ResistenciaDeGolpe;
+    public int ResistenciaDeGolpe;
     public int Velocidad;
-
     [SerializeField] List<AudioClip> Sonidos;
     [SerializeField] protected int TiempoDeAtaqueEspecial;
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
     [SerializeField] float Sensor;
-    private int CantidadDeGolpesRecibidos;
+    public int CantidadDeGolpesRecibidos;
     private bool Herida;
     void Start()
     {
@@ -23,8 +22,8 @@ public abstract class Cucarachas : MonoBehaviour
     }
     void Update()
     {
-        Movimiento();
         Sensores();
+        Movimiento();
     }
     private void Movimiento()
     {
@@ -61,18 +60,29 @@ public abstract class Cucarachas : MonoBehaviour
     }
     public virtual void RecibirDaño(int Daño)
     {
-        GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(1, Sonidos.Count)], 3 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
+        if (Daño == 1)
+        {
+            GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(1, Sonidos.Count)], 3 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
+        }
+        else
+        {
+            GetComponent<AudioSource>().PlayOneShot(Sonidos[0], 3 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
+
+        }
+
         Herida = true;
         Velocidad = Velocidad / 2;
         CantidadDeGolpesRecibidos += Daño;
         if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
         {
+            GetComponent<Rigidbody>().isKinematic = false;
+            GetComponent<Rigidbody>().useGravity = true;
             ManagerDeNivel.CargaDeAerosol++;
             ManagerDeNivel.CucarachasMuertas++;
             ManagerDeNivel.CantidadDeCucarachas.Remove(this);
             Velocidad = 0;
             GetComponent<Collider>().enabled = false;
-            Invoke("Morir", 1.5f);
+            Invoke("Morir", 5f);
         }
     }
     public virtual void Morir()

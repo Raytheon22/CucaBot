@@ -18,7 +18,6 @@ public class ArmaAerosol : MonoBehaviour
             ManagerDeNivel.CargaDeAerosol = 0;
             DuracionDeAerosol = 5;
         }
-        Debug.Log(DuracionDeAerosol);
     }
     void OnTriggerEnter(Collider ObjetoColisionado)
     {

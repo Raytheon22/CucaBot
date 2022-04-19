@@ -215,8 +215,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.18155442, y: 5, z: 7.5400004}
-  m_Center: {x: 4.915481, y: 2.5, z: 3.7700002}
+  m_Size: {x: 2.4977875, y: 5, z: 10.537976}
+  m_Center: {x: 6.0298095, y: 2.5, z: 3.8651185}
 --- !u!65 &5231806088238219833
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21911831, y: 5, z: 7.5400004}
-  m_Center: {x: 0.109559156, y: 2.5, z: 3.7700002}
+  m_Size: {x: 1.9678614, y: 5, z: 7.5400004}
+  m_Center: {x: -0.7648124, y: 2.5, z: 3.7700002}
 --- !u!65 &5231806088238219832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -241,8 +241,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.049999, y: 5, z: 0.1542881}
-  m_Center: {x: 2.5249996, y: 2.5, z: 0.07714405}
+  m_Size: {x: 6.5146914, y: 5, z: 1.6511847}
+  m_Center: {x: 1.792655, y: 2.5, z: -0.67130405}
 --- !u!65 &5231806088238219835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -254,8 +254,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.049999, y: 5, z: 0.1157341}
-  m_Center: {x: 2.5249996, y: 2.5, z: 7.4821396}
+  m_Size: {x: 6.5541415, y: 5, z: 1.9469956}
+  m_Center: {x: 1.77293, y: 2.5, z: 8.397775}
 --- !u!1 &4527050663026742464
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,12 +267,13 @@ GameObject:
   - component: {fileID: 2543059730703225165}
   - component: {fileID: 6330143904957968312}
   - component: {fileID: 2682719212584936442}
+  - component: {fileID: 814294535}
   m_Layer: 0
   m_Name: Heladera
-  m_TagString: Untagged
+  m_TagString: Escenario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2543059730703225165
 Transform:
@@ -316,8 +317,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 6495427927187304826, guid: 328baf3f9c9ccdf49b3def5a501d99ae, type: 3}
-  - {fileID: -3963241562183589234, guid: 328baf3f9c9ccdf49b3def5a501d99ae, type: 3}
-  - {fileID: -3917474586974226894, guid: 328baf3f9c9ccdf49b3def5a501d99ae, type: 3}
+  - {fileID: 2100000, guid: 9e0ed66e54de8b340aed79dcede49e3a, type: 2}
+  - {fileID: 2100000, guid: 9e0ed66e54de8b340aed79dcede49e3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -339,6 +340,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &814294535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4527050663026742464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 1.9399999, z: 0.76}
+  m_Center: {x: 0.31999975, y: 0.96999997, z: 0.38}
 --- !u!1 &4922166926988907465
 GameObject:
   m_ObjectHideFlags: 0

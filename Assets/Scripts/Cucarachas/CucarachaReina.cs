@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CucarachaReina : Cucarachas
 {
+    [SerializeField] GameObject BarraDeVida;
     [SerializeField] GameObject[] Entidad;
     void Start()
     {
@@ -15,6 +16,7 @@ public class CucarachaReina : Cucarachas
     {
         base.RecibirDaño(Daño);
         Velocidad = Velocidad * 2;
+
     }
     public override void AtaqueEspecial()
     {

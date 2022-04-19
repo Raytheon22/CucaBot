@@ -4849,6 +4849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chancla: {fileID: 3520062141321559237, guid: 88731233db7267f449a5225ab6064d68, type: 3}
+  FuerzaDeLanzamiento: 0
   LimiteDeLanzamiento: 150
   Sonidos:
   - {fileID: 8300000, guid: 6bf7d49cbee790e479ce801c67a0d74c, type: 3}
@@ -5094,7 +5095,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

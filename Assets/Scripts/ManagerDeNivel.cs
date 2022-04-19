@@ -11,7 +11,8 @@ public class ManagerDeNivel : MonoBehaviour
     public static int CargaDeAerosol;
     public static bool OjotaEnEscena;
     public GameObject Jefe;
-    public bool JefeInstanciado;
+    public static GameObject Instancia;
+    public static bool JefeInstanciado;
     public static bool Victoria;
     public static bool Derrota;
     void Start()
@@ -28,7 +29,7 @@ public class ManagerDeNivel : MonoBehaviour
     {
         if (CucarachasMuertas == 20 && JefeInstanciado == false)
         {
-            Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
+            Instancia = Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
             JefeInstanciado = true;
         }
         if (CantidadDeCucarachas.Count > 40)

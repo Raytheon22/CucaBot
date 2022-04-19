@@ -13,7 +13,7 @@ public class ManagerConfiguraciones : MonoBehaviour
     {
         if (ConfiguracionesJuego == null)
         {
-            VolumenMusica = 0.4f;
+            VolumenMusica = 0.2f;
             VolumenEfectos = 0.4f;
             Sensibilidad = 200;
             ConfiguracionesJuego = this;

@@ -119,7 +119,9 @@ MonoBehaviour:
   TiempoDeAtaqueEspecial: 20
   AleatoriedadDeGiro: 180
   Nerviosa: 1
-  Sensor: 0.5
+  Sensor: 1
+  CantidadDeGolpesRecibidos: 0
+  BarraDeVida: {fileID: 0}
   Entidad:
   - {fileID: 2463544633895734917, guid: 9bee804dc4bd67a4982b7cd830fd6fef, type: 3}
   - {fileID: 5488289047062619774, guid: 2d33ee9ca464b2845867c364bea87645, type: 3}
