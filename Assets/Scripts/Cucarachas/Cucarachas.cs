@@ -69,7 +69,6 @@ public abstract class Cucarachas : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(Sonidos[0], 3 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
 
         }
-
         Herida = true;
         Velocidad = Velocidad / 2;
         CantidadDeGolpesRecibidos += Daño;
@@ -77,7 +76,10 @@ public abstract class Cucarachas : MonoBehaviour
         {
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().useGravity = true;
-            ManagerDeNivel.CargaDeAerosol++;
+            if (Daño == 1)
+            {
+                ManagerDeNivel.CargaDeAerosol++;
+            }
             ManagerDeNivel.CucarachasMuertas++;
             ManagerDeNivel.CantidadDeCucarachas.Remove(this);
             Velocidad = 0;
