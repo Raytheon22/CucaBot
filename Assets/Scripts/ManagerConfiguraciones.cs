@@ -23,5 +23,6 @@ public class ManagerConfiguraciones : MonoBehaviour
         {
             Destroy(this);
         }
+        Application.targetFrameRate = 70;
     }
 }

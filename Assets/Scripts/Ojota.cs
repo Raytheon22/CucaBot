@@ -6,21 +6,22 @@ public class Ojota : MonoBehaviour
 {
     private bool Regresando;
     private GameObject UbicacionManoJugador;
+    [SerializeField] AudioClip SonidoGolpe;
 
 
-    [SerializeField] List<AudioClip> Sonidos;
+
     void OnCollisionEnter(Collision ObjetoColisionado)
     {
         if (ObjetoColisionado.gameObject.tag == "Enemigos")
         {
             ObjetoColisionado.gameObject.SendMessage("RecibirDaño", 1);
-            GetComponent<AudioSource>().PlayOneShot(Sonidos[0], 2 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
             Invoke("Regresar", 0.5f);
         }
         else
         {
+            GetComponent<AudioSource>().volume = ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos;
+            GetComponent<AudioSource>().Play();
             Invoke("Regresar", 1.2f);
-            GetComponent<AudioSource>().PlayOneShot(Sonidos[1], ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
         }
     }
     public void RecibirInformacion(GameObject Ubicacion)

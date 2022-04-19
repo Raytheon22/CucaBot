@@ -45,7 +45,7 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         ManagerDeNivel.Pausa = false;
-        SceneManager.LoadScene("Escena de desarrollo");
+        SceneManager.LoadScene("Escena 1");
     }
     public void Opciones()
     {

@@ -32,7 +32,7 @@ public class ArmaOjota : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(0, Sonidos.Count)], ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
+                GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(0, Sonidos.Count)], 0.5f * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
                 ManagerDeNivel.OjotaEnEscena = gameObject;
                 ObjetoInstanciado = Instantiate(chancla, transform.position, transform.rotation);
                 ObjetoInstanciado.SendMessage("RecibirInformacion", gameObject);

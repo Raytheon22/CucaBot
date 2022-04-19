@@ -6,6 +6,8 @@ public abstract class Cucarachas : MonoBehaviour
     //!Este script se encarga de realizar el movimiento y acciones de las cucarachas.
     [SerializeField] int ResistenciaDeGolpe;
     public int Velocidad;
+
+    [SerializeField] List<AudioClip> Sonidos;
     [SerializeField] protected int TiempoDeAtaqueEspecial;
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
@@ -59,19 +61,22 @@ public abstract class Cucarachas : MonoBehaviour
     }
     public virtual void RecibirDaño(int Daño)
     {
+        GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(1, Sonidos.Count)], 3 * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
         Herida = true;
         Velocidad = Velocidad / 2;
         CantidadDeGolpesRecibidos += Daño;
         if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
         {
-            Morir();
+            ManagerDeNivel.CargaDeAerosol++;
+            ManagerDeNivel.CucarachasMuertas++;
+            ManagerDeNivel.CantidadDeCucarachas.Remove(this);
+            Velocidad = 0;
+            GetComponent<Collider>().enabled = false;
+            Invoke("Morir", 1.5f);
         }
     }
     public virtual void Morir()
     {
-        ManagerDeNivel.CargaDeAerosol++;
-        ManagerDeNivel.CucarachasMuertas++;
-        ManagerDeNivel.CantidadDeCucarachas.Remove(this);
         Destroy(this.gameObject);
     }
 

@@ -127,9 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8685106c902d42f4fbfcd6cf5fd450dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sonidos:
-  - {fileID: 8300000, guid: 6cc524745d691404e9ec4b8519c9ecec, type: 3}
-  - {fileID: 8300000, guid: cb49a423e43dcfb4c891e72cb7bebce5, type: 3}
+  SonidoGolpe: {fileID: 8300000, guid: cb49a423e43dcfb4c891e72cb7bebce5, type: 3}
 --- !u!96 &7704063059395102335
 TrailRenderer:
   serializedVersion: 2
@@ -247,7 +245,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d1191f0b361c6a48bf3a1824382b9a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cb49a423e43dcfb4c891e72cb7bebce5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 3
