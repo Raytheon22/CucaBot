@@ -26,11 +26,16 @@ public class CucarachaReina : Cucarachas
     }
     public override void Morir()
     {
-        SceneManager.LoadScene("Menu");
+        ManagerDeNivel.Victoria = true;
+        Invoke("cargarNivel", 4);
     }
     public override void Curarse()
     {
 
+    }
+    void cargarNivel()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
 

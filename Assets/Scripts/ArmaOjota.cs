@@ -7,7 +7,7 @@ public class ArmaOjota : MonoBehaviour
 
     [SerializeField] GameObject chancla;
     private GameObject ObjetoInstanciado;
-    private float FuerzaDeLanzamiento;
+    public float FuerzaDeLanzamiento;
     private bool CargandoLanzamiento;
     [SerializeField] float LimiteDeLanzamiento;
     [SerializeField] List<AudioClip> Sonidos;

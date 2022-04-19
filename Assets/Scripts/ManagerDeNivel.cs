@@ -12,7 +12,8 @@ public class ManagerDeNivel : MonoBehaviour
     public static bool OjotaEnEscena;
     public GameObject Jefe;
     public bool JefeInstanciado;
-
+    public static bool Victoria;
+    public static bool Derrota;
     void Start()
     {
         Pausa = false;
@@ -20,6 +21,8 @@ public class ManagerDeNivel : MonoBehaviour
         CargaDeAerosol = 0;
         CucarachasMuertas = 0;
         OjotaEnEscena = false;
+        Victoria = false;
+        Derrota = false;
     }
     void Update()
     {
@@ -28,9 +31,14 @@ public class ManagerDeNivel : MonoBehaviour
             Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
             JefeInstanciado = true;
         }
-        if (CantidadDeCucarachas.Count > 20000)
+        if (CantidadDeCucarachas.Count > 40)
         {
-            SceneManager.LoadScene("Menu");
+            Derrota = true;
+            Invoke("cargarNivel", 4);
         }
+    }
+    void cargarNivel()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
