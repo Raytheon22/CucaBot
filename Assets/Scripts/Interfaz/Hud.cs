@@ -64,7 +64,7 @@ public class Hud : MonoBehaviour
     }
     private void CambiarPotencia()
     {
-        Arma.GetComponent<Text>().text = "Power: " + (int)(Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento / 150 * 100) + " %";
+        Arma.GetComponent<Text>().text = "Power: " + (int)(Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento / 120 * 100) + " %";
         if ((int)Jugador.GetComponent<ArmaOjota>().FuerzaDeLanzamiento > 100)
         {
             Arma.GetComponent<Text>().color = new Color(255, 255, 0, 255);

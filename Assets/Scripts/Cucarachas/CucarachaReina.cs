@@ -20,15 +20,22 @@ public class CucarachaReina : Cucarachas
     }
     public override void AtaqueEspecial()
     {
-        base.AtaqueEspecial();
-        for (int n = 0; n < 2; n++)
+        if (ManagerDeNivel.Victoria == false)
         {
-            Instantiate(Entidad[Random.Range(0, Entidad.Length)], transform.position, transform.rotation);
+            base.AtaqueEspecial();
+            for (int n = 0; n < 2; n++)
+            {
+                Instantiate(Entidad[Random.Range(0, Entidad.Length)], transform.position, transform.rotation);
+            }
         }
     }
     public override void Morir()
     {
         ManagerDeNivel.Victoria = true;
+        foreach (Cucarachas item in ManagerDeNivel.CantidadDeCucarachas)
+        {
+            item.MuerteTotal();
+        }
         Invoke("cargarNivel", 4);
     }
     public override void Curarse()

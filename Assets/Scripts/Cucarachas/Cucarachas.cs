@@ -84,7 +84,7 @@ public abstract class Cucarachas : MonoBehaviour
             ManagerDeNivel.CantidadDeCucarachas.Remove(this);
             Velocidad = 0;
             GetComponent<Collider>().enabled = false;
-            Invoke("Morir", 5f);
+            Invoke("Morir", 4f);
         }
     }
     public virtual void Morir()
@@ -100,6 +100,14 @@ public abstract class Cucarachas : MonoBehaviour
             CantidadDeGolpesRecibidos = 0;
             Herida = false;
         }
+    }
+
+    public void MuerteTotal()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().useGravity = true;
+        Velocidad = 0;
+        GetComponent<Collider>().enabled = false;
     }
 }
 

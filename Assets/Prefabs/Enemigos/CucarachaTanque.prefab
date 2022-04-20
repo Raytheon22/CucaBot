@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResistenciaDeGolpe: 3
-  Velocidad: 10
+  Velocidad: 8
   Sonidos:
   - {fileID: 8300000, guid: 3d1191f0b361c6a48bf3a1824382b9a6, type: 3}
   - {fileID: 8300000, guid: 12e568077d47c964997d824d9cb9d090, type: 3}

@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &790606232726702884
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &1487741165319265483
@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06941667, y: 0.27800003}
   m_AnchorMax: {x: 0.8373334, y: 0.5324445}
-  m_AnchoredPosition: {x: -2.8239746, y: -0.5417023}
+  m_AnchoredPosition: {x: -2.8239746, y: -0.5417175}
   m_SizeDelta: {x: -5.6481, y: 1.1643982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3658097350362122683
@@ -739,3 +739,5 @@ MonoBehaviour:
   UIOpciones: {fileID: 6420365414409290302, guid: 7bf7bd7f98dee4a41b4c5b196746a9ce, type: 3}
   UITutorial: {fileID: 9180330511705434608}
   UIControles: {fileID: 4010875277536351221, guid: 4066254ce7ba0254480c8ecde3ce409d, type: 3}
+  Transicion: {fileID: 0}
+  Sonido: {fileID: 0}

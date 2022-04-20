@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-
+        PuedeSpawnear = !ManagerDeNivel.Victoria;
     }
     void SpawnearEntidad() //*RECURSIVIDAD.
     {

@@ -17,7 +17,7 @@ public class ArmaOjota : MonoBehaviour
     }
     void Update()
     {
-        if (ManagerDeNivel.OjotaEnEscena == false)
+        if (ManagerDeNivel.OjotaEnEscena == false && ManagerDeNivel.Derrota == false)
         {
             if ((Input.GetKeyDown(KeyCode.Mouse0)))
             {
