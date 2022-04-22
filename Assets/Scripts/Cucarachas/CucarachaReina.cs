@@ -17,6 +17,7 @@ public class CucarachaReina : Cucarachas
     {
         base.RecibirDaño(Daño);
         Velocidad = Velocidad * 2;
+        MaquinaDeEstado.speed = MaquinaDeEstado.speed * 2;
 
     }
     public override void AtaqueEspecial()
