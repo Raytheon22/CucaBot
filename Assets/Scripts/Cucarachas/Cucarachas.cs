@@ -11,14 +11,15 @@ public abstract class Cucarachas : MonoBehaviour
     [SerializeField] int AleatoriedadDeGiro;
     [SerializeField] int Nerviosa;
     [SerializeField] float Sensor;
+    protected Animator MaquinaDeEstado;
     public int CantidadDeGolpesRecibidos;
     private bool Herida;
     void Start()
     {
+        MaquinaDeEstado = GetComponentInChildren<Animator>();
         Rotacion();
         ManagerDeNivel.CantidadDeCucarachas.Add(this);
         Invoke("AtaqueEspecial", TiempoDeAtaqueEspecial);
-
     }
     void Update()
     {
@@ -52,6 +53,11 @@ public abstract class Cucarachas : MonoBehaviour
         {
             Vector3 v = transform.rotation.eulerAngles;
             transform.rotation = Quaternion.Euler(v.x, v.y, 0);
+            MaquinaDeEstado.SetBool("Volando", true);
+        }
+        else
+        {
+            MaquinaDeEstado.SetBool("Volando", false);
         }
     }
     public virtual void AtaqueEspecial()
@@ -71,6 +77,7 @@ public abstract class Cucarachas : MonoBehaviour
         }
         Herida = true;
         Velocidad = Velocidad / 2;
+        MaquinaDeEstado.speed = MaquinaDeEstado.speed / 2;
         CantidadDeGolpesRecibidos += Daño;
         if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
         {
@@ -96,6 +103,7 @@ public abstract class Cucarachas : MonoBehaviour
     {
         if (Herida == true)
         {
+            MaquinaDeEstado.speed = MaquinaDeEstado.speed * 2;
             Velocidad = Velocidad * CantidadDeGolpesRecibidos * 2;
             CantidadDeGolpesRecibidos = 0;
             Herida = false;

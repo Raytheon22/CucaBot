@@ -9,6 +9,7 @@ public class CucarachaReina : Cucarachas
     [SerializeField] GameObject[] Entidad;
     void Start()
     {
+        MaquinaDeEstado = GetComponentInChildren<Animator>();
         Rotacion();
         Invoke("AtaqueEspecial", TiempoDeAtaqueEspecial);
     }

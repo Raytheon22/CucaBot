@@ -31,6 +31,15 @@ public class Pausa : MonoBehaviour
     }
     public void VolverAlJuego()
     {
+        AudioSource[] AudioSonando = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in AudioSonando)
+        {
+            if (a.gameObject.tag != "GameController")
+            {
+                a.Play();
+            }
+
+        }
         Efectos.reproducir();
         Time.timeScale = 1;
         Cursor.visible = false;

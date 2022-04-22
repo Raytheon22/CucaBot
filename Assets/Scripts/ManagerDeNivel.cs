@@ -24,6 +24,8 @@ public class ManagerDeNivel : MonoBehaviour
         OjotaEnEscena = false;
         Victoria = false;
         Derrota = false;
+        JefeInstanciado = false;
+        Instancia = null;
     }
     void Update()
     {
@@ -31,6 +33,7 @@ public class ManagerDeNivel : MonoBehaviour
         {
             Instancia = Instantiate(Jefe, new Vector3(0, 0.5f, 0), Quaternion.identity);
             JefeInstanciado = true;
+            GetComponent<AudioSource>().Play();
         }
         if (CantidadDeCucarachas.Count > 40)
         {

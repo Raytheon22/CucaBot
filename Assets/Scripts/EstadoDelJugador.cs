@@ -43,6 +43,7 @@ public class EstadoDelJugador : MonoBehaviour
         {
             ArmaActual.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
+
         }
         else
         {

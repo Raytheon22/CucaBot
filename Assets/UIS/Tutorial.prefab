@@ -501,7 +501,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "You will lose if the amount of cockroaches exceeds 40.\nEvery time you
     have killed 10 cockroaches, you can use a insecticide in spray for 5 seconds.
-    \nYou win when you kill the cockroach with the crow...it appears when she wants..."
+    \nYou win when you kill the cockroach with the crown...it appears when she wants..."
 --- !u!114 &4174751241197308085
 MonoBehaviour:
   m_ObjectHideFlags: 0

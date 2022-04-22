@@ -358,8 +358,6 @@ GameObject:
   - component: {fileID: 6197858132139272602}
   - component: {fileID: 971786254756604914}
   - component: {fileID: 9199289417478367018}
-  - component: {fileID: 2863311523416283209}
-  - component: {fileID: 4536811610420513167}
   m_Layer: 5
   m_Name: BarraDeVida
   m_TagString: Untagged
@@ -427,114 +425,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!82 &2863311523416283209
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3607985835530227360}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fba183bda6b94874186544c4e45c1a24, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &4536811610420513167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3607985835530227360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3061f374aa9515c4d8c65bd599a8776f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4593119008079645812
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +516,7 @@ GameObject:
   - component: {fileID: 3708992852897137579}
   m_Layer: 5
   m_Name: Hud
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +625,7 @@ MonoBehaviour:
   Transicion: {fileID: 8711387244441013286}
   Arma: {fileID: 6360499119804805765}
   Jugador: {fileID: 0}
-  BarraDeVida: {fileID: 0}
+  BarraDeVida: {fileID: 3607985835530227360}
   PantallaVictoria: {fileID: 8051082500547311241}
   PantallaDerrota: {fileID: 2983201723048812501}
 --- !u!222 &3708992852897137579
@@ -980,7 +870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38700002, y: 0.42100003}
   m_AnchorMax: {x: 0.614, y: 0.4665926}
-  m_AnchoredPosition: {x: -1.1801147, y: 1.2579956}
+  m_AnchoredPosition: {x: 5.0999756, y: 1.2579956}
   m_SizeDelta: {x: -1.4418945, y: -2.5165005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7355429244410028016
@@ -1075,7 +965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35000002, y: 0.934}
   m_AnchorMax: {x: 0.693, y: 0.98800004}
-  m_AnchoredPosition: {x: 0.14868164, y: 0.22790527}
+  m_AnchoredPosition: {x: 0.30297852, y: 0.22790527}
   m_SizeDelta: {x: -1.70264, y: -1.0303001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2021974369226817185
@@ -1247,7 +1137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1376790198840372169
 RectTransform:
   m_ObjectHideFlags: 0

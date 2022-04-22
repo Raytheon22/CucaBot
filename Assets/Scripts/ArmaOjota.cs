@@ -10,10 +10,10 @@ public class ArmaOjota : MonoBehaviour
     public float FuerzaDeLanzamiento;
     private bool CargandoLanzamiento;
     [SerializeField] float LimiteDeLanzamiento;
-    [SerializeField] List<AudioClip> Sonidos;
+    //[SerializeField] List<AudioClip> Sonidos;
     void Start()
     {
-        FuerzaDeLanzamiento = 46;
+        FuerzaDeLanzamiento = 37;
     }
     void Update()
     {
@@ -32,13 +32,13 @@ public class ArmaOjota : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(0, Sonidos.Count)], 0.5f * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
+                // GetComponent<AudioSource>().PlayOneShot(Sonidos[Random.Range(0, Sonidos.Count)], 0.5f * ManagerConfiguraciones.ConfiguracionesJuego.VolumenEfectos);
                 ManagerDeNivel.OjotaEnEscena = gameObject;
                 ObjetoInstanciado = Instantiate(chancla, transform.position, transform.rotation);
                 ObjetoInstanciado.SendMessage("RecibirInformacion", gameObject);
                 ObjetoInstanciado.GetComponent<Rigidbody>().AddForce(transform.forward * FuerzaDeLanzamiento, ForceMode.Impulse);
                 ObjetoInstanciado.GetComponent<Rigidbody>().AddTorque(transform.up * -10, ForceMode.Impulse);
-                FuerzaDeLanzamiento = 46;
+                FuerzaDeLanzamiento = 37;
                 CargandoLanzamiento = false;
             }
         }
