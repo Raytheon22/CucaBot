@@ -18,7 +18,10 @@ public class CucarachaReina : Cucarachas
         base.RecibirDaño(Daño);
         Velocidad = Velocidad * 2;
         MaquinaDeEstado.speed = MaquinaDeEstado.speed * 2;
-
+        if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
+        {
+            ManagerDeNivel.Victoria = true;
+        }
     }
     public override void AtaqueEspecial()
     {
@@ -33,7 +36,6 @@ public class CucarachaReina : Cucarachas
     }
     public override void Morir()
     {
-        ManagerDeNivel.Victoria = true;
         foreach (Cucarachas item in ManagerDeNivel.CantidadDeCucarachas)
         {
             item.MuerteTotal();

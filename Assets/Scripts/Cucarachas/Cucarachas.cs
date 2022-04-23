@@ -94,6 +94,7 @@ public abstract class Cucarachas : MonoBehaviour
             Invoke("Morir", 4f);
         }
     }
+
     public virtual void Morir()
     {
         Destroy(this.gameObject);
