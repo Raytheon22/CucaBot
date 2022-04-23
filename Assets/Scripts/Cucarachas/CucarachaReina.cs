@@ -21,6 +21,10 @@ public class CucarachaReina : Cucarachas
         if (CantidadDeGolpesRecibidos == ResistenciaDeGolpe || CantidadDeGolpesRecibidos > ResistenciaDeGolpe)
         {
             ManagerDeNivel.Victoria = true;
+            foreach (Cucarachas item in ManagerDeNivel.CantidadDeCucarachas)
+            {
+                item.MuerteTotal();
+            }
         }
     }
     public override void AtaqueEspecial()
@@ -36,10 +40,6 @@ public class CucarachaReina : Cucarachas
     }
     public override void Morir()
     {
-        foreach (Cucarachas item in ManagerDeNivel.CantidadDeCucarachas)
-        {
-            item.MuerteTotal();
-        }
         Invoke("cargarNivel", 4);
     }
     public override void Curarse()
