@@ -17,6 +17,10 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         PuedeSpawnear = !ManagerDeNivel.Victoria;
+        if (PuedeSpawnear == false)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void SpawnearEntidad() //*RECURSIVIDAD.
     {
